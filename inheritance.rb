@@ -4,6 +4,8 @@ class Song
     @artist   = artist
     @duration = duration
   end
+
+  attr_reader :name,:artist,:duration
 end
 
 #inheritance usage with super keyword invoking parent class
@@ -17,7 +19,7 @@ end
 # Class variables and Class menthods
 class SongList
   MaxTime = 5*60     # -> Constant
-  def SongList.isTooLong(aSong)
+  def self.isTooLong(aSong)
     return aSong.duration > MaxTime
   end
 end
